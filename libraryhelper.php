@@ -145,25 +145,25 @@ class LibraryHelper
 	private function pull_data($url)
 	{
 		$context = stream_context_create(array('http' => array(
-						'timeout' => '5' // Timeout in seconds
-                    )));
+				'timeout' => '5' // Timeout in seconds
+	            )));
 
-        $contents = file_get_contents($url, 0, $context);
+		$contents = file_get_contents($url, 0, $context);
 
-        return $contents;
+		return $contents;
 	}
 
 	private function parse_response($raw, $type='xml')
 	{
 		if ($type == 'xml')
-        {
+		{
 			$parsed = simplexml_load_string($raw);
-        }
-        elseif ($type == 'json')
-        {
-        	$parsed = json_decode($raw);
-        }
+		}
+		elseif ($type == 'json')
+		{
+		   	$parsed = json_decode($raw);
+		}
 
-        return $parsed;
+		return $parsed;
 	}
 }
