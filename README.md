@@ -6,7 +6,7 @@ library-helper is an __unofficial__ helper for the various API's offered by Libr
 This was put together quickly, so there are still many features that I would like to add and things I would like to change. Also Let me know if you find any bugs.
 
 Including:
-* Allow setting the title, isbn, etc on when you intiate the class.
+* Allow setting the title, isbn, etc when you initiate the class.
 * Any missing methods.
 * Real Documentation (Beyond examples)
 * Better Error Handling (Exceptions?)
@@ -16,7 +16,7 @@ Including:
 Getting started.
 ---------------------
 
-library-helper is very simple to use. Just include the helper and intiate the library-helper class. For some methods you will also need a developer key. You can get one here: https://www.librarything.com/services/keys.php
+library-helper is very simple to use. Just include the helper and initiate the library-helper class. For some methods you will also need a developer key. You can get one here: https://www.librarything.com/services/keys.php
 
 ```php
 <?php
@@ -31,7 +31,7 @@ Methods
 
 ### get_work
 
-Pull down information on a specific work. You are able to look up works with either: id, isbn, lccn, oclc, or the name. Only one is required. Also they must be sent to the array in key => value pairs. (Such as 'isbn' => 'ISBN-NUMBER').
+Pull down information on a specific work. You are able to look up works with either: id, isbn, lccn, oclc, or the name. Only one is required. Also they must be sent to the array with key => value pairs. (Such as 'isbn' => 'ISBN-NUMBER').
 
 __Example__
 
@@ -63,7 +63,7 @@ require libraryhelper.php;
 
 $libraryhelper = new LibraryHelper('DEVLOPER-KEY');
 
-$cover_url = $libraryhelper->get_cover_url('ISBN-NUMBER', 'size')
+$cover_url = $libraryhelper->get_cover_url('ISBN-NUMBER', 'size');
 
 print_r($cover_url);
 
@@ -82,7 +82,7 @@ require libraryhelper.php;
 
 $libraryhelper = new LibraryHelper('DEVLOPER-KEY');
 
-$language = $libraryhelper->get_book_language('ISBN-NUMBER', true)
+$language = $libraryhelper->get_book_language('ISBN-NUMBER', true);
 
 print_r($language);
 
@@ -146,6 +146,7 @@ $isbns = $libraryhelper>search_title_isbn('TITLE');
 print_r($isbns);
 
 ?>
+```
 
 Examples
 ---------------------
