@@ -6,7 +6,7 @@
 
 require 'libraryhelper.php';
 
-$library_helper = new LibraryHelper('bccc45937e724c7ee8389c44abd1b973');
+$library_helper = new LibraryHelper('API-KEY');
 
 //$search = array('id' => '1060');
 //print_r($library_helper->get_work($search));
